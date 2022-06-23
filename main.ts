@@ -30,7 +30,7 @@ basic.forever(function () {
     Enemy.delete()
 })
 basic.forever(function () {
-    if (Enemy.isTouching(player)) {
+    if (Enemy.isTouching(player) || Enemy.get(LedSpriteProperty.Y) == 4) {
         player.delete()
         game.gameOver()
     }
